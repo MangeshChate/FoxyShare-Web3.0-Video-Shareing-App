@@ -6,6 +6,7 @@ import FoxyShare from './components/FoxyShare'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Wallet from './components/Wallet'
+import Profile from './components/Profile'
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
         <Route path="/foxyshare" element={<FoxyShare state={state} />} />
 
         <Route path="foxyshare/video" element={<Video state={state} />} />
+        <Route path="foxyshare/profile" element={<Profile state={state} />} />
+
         <Route path="/profilesetup" element={<ProfileSetup state={state} />} />
       </Routes>
 

@@ -96,6 +96,7 @@ function FoxyShare({state}) {
         
        
         const res = await contract.methods.getPosts().call();
+        
        
         setTubes(res);
         console.log(res)
@@ -209,7 +210,7 @@ function FoxyShare({state}) {
         {
                         tubes.slice().reverse().map((tube) => (
                             <Grid item xs={12} sm={6} md={3}>
-                                <Card account={tube.account} name={tube.name} title={tube.title} description={tube.description} videoUrl={tube.videoUrl} profileImg={tube.profileImg} thumbnail={tube.thumbnail}  />
+                                <Card account={tube.account} name={tube.name} title={tube.title} description={tube.description} videoUrl={tube.videoUrl} profileImg={tube.profileImg} thumbnail={tube.thumbnail} tubes={tubes} />
                             </Grid>
                         ))
           }
