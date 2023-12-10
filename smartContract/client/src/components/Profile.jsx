@@ -22,7 +22,7 @@ function Profile({state}) {
           const res = await contract.methods.getPosts().call();
           
          setPost(res)
-          const userPosts = await res.filter(post => post.account === storedAccount);
+          const userPosts = await res.filter(post => post.name === storedName);
           setUserPost(userPosts);
     
         }
